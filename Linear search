@@ -1,0 +1,24 @@
+void read1(int a[20], int n)
+{
+	printf("Enter %d elements : ",n);
+	for(int i = 0 ; i< n ;i++)
+		{
+			scanf("%d",&a[i]);
+		}
+}
+int linearSearch(int a[20],int i, int n, int key)
+{
+	while(i <= n)
+		{
+			if(a[i] == key)
+			{
+				return i;
+			}
+			else{
+				i++;
+				return linearSearch(a,i,n,key);
+			}
+		}
+	return -1;
+}
+
